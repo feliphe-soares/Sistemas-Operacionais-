@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage[portuguese]{babel}
+\usepackage{hyperref}
+
+\newtheorem{definition}{definição}
+
+
+\title{Sistemas Operacionais}
+\author{Feliphe Dal Col Soares}
+\date{\today}
+
+\begin{document}
+\tableofcontents
+\maketitle
+\clearpage
+\section*{Apresentação}
+Na disciplina, iremos começar com a grande Historia do surgimento dos sistemas
+operacionais modernos. Na seção \ref{unix}, ...
+\newpage
+\section{Road to UNIX}
+\label{unix}
+\subsection{Sobre as maquinas}
+\begin{itemize}
+    \item A Pascalina \footnote{\url{https://www.arts-et-metiers.net/musee/lheritage-mathematique-de-blaise-pascal-de-la-pascaline-la-theorie-des-probabilites}} é a famosa máquina de Blaise.
+    \item A máquina de Babbage \footnote{\href{Babbage}{https://www.sciencemuseum.org.uk/objects-and-stories/charles-babbages-difference-engines-and-science-museum}} é a famosa máquina de Charles e Ada
+\end{itemize}
+
+\subsection{Sobre os sitemas}
+
+Na definição \ref{os}
+
+\begin{definition}{Sistema Operacional}\label{os}
+Camada de software que gerencia os recursos da máquina
+\end{definition}
+
+\end{document}
