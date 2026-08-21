@@ -2,36 +2,133 @@
 \usepackage{graphicx} % Required for inserting images
 \usepackage[portuguese]{babel}
 \usepackage{hyperref}
+\usepackage{lipsum}
+\usepackage{listings}
+\usepackage{amsmath}
 
-\newtheorem{definition}{definição}
+\usepackage{chronology}
+\usepackage{rotating}
 
+\usepackage{fontawesome}
 
-\title{Sistemas Operacionais}
+\newtheorem{definition}{Definição}
+\renewcommand{\lstlistingname}{Código}
+\renewcommand{\lstlistlistingname}{Lista dos \lstlistingname s}
+
+\title{Sitemas Operacionais}
 \author{Feliphe Dal Col Soares}
 \date{\today}
 
 \begin{document}
-\tableofcontents
+
 \maketitle
+\begin{abstract}
+ Dos estoicos gregos pais da lógica erloniana proposicional até os data center da Amazon, o sistema operacional ocupa um lugar central (10).  \lipsum[2] 
+\end{abstract}
+\tableofcontents
+\lstlistoflistings
+\listoffigures
 \clearpage
 \section*{Apresentação}
-Na disciplina, iremos começar com a grande Historia do surgimento dos sistemas
-operacionais modernos. Na seção \ref{unix}, ...
-\newpage
+Na disciplina, iremos começar com a grande Hístoria do surgimento dos sistemas operacionais modernos. Na Seção \ref{unix}, ...
+\newpage 
 \section{Road to UNIX}
 \label{unix}
-\subsection{Sobre as maquinas}
+\subsection{Sobre as máquinas}
 \begin{itemize}
-    \item A Pascalina \footnote{\url{https://www.arts-et-metiers.net/musee/lheritage-mathematique-de-blaise-pascal-de-la-pascaline-la-theorie-des-probabilites}} é a famosa máquina de Blaise.
-    \item A máquina de Babbage \footnote{\href{Babbage}{https://www.sciencemuseum.org.uk/objects-and-stories/charles-babbages-difference-engines-and-science-museum}} é a famosa máquina de Charles e Ada
+    \item A Pascaline\footnote{\url{https://www.arts-et-metiers.net/musee/lheritage-mathematique-de-blaise-pascal-de-la-pascaline-la-theorie-des-probabilites}} é a famosa máquina de Blaise.
+    \item A máquine de Babbage\footnote{\href{https://www.sciencemuseum.org.uk/objects-and-stories/charles-babbages-difference-engines-and-science-museum}{Babbage machine}} é a famosa máquina de Charles e Ada.
 \end{itemize}
 
-\subsection{Sobre os sitemas}
+\subsection{Sobre os sistemas}
 
-Na definição \ref{os}
+% \newtheorem{definition}{Definição}
 
-\begin{definition}{Sistema Operacional}\label{os}
-Camada de software que gerencia os recursos da máquina
+Na Definição \ref{os}, ...
+
+\begin{definition}[Sistema operacional]\label{os}
+Camada de software que gerencia os recursos da máquina.    
 \end{definition}
 
+Na Definição \ref{def:ts}
+
+\begin{definition}[Time Sharing]\label{def:ts}
+Múltiplos usuários utilizam a mesma máquina "ao mesmo tempo".    
+\end{definition}
+
+\subsection{Sobre as linguagens}
+
+\subsubsection{C}
+
+No Código \ref{c}
+
+\begin{lstlisting}[language=C,caption=Hello World em C,label=c]
+#include <stdio.h>
+
+int main(void)
+{
+    printf("hello, world\n");
+}    
+\end{lstlisting}
+
+\subsubsection{\LaTeX}
+
+$\alpha \beta \gamma$ ou $\tau \epsilon \chi$
+
+$$ e^{i\pi} + 1 = 0 $$
+
+\begin{equation}
+\text{\LaTeX{}} > \frac{1}{n} \sum_{i=1}^{n} x_i    
+\end{equation}
+
+\clearpage
+
+\section{Linux}
+
+% \includegraphics{images/kurumin.png}
+
+% \includegraphics[width=0.75\linewidth]{images/inside-the-linux-kernel.png}
+
+Na Figura \ref{fig:tux}, ...
+\lipsum[3]
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.5\linewidth]{images/kurumin.png}
+    \caption{Tux na sua versão Kurumin}
+    \label{fig:tux}
+\end{figure}
+
+\clearpage
+\section{Apple macOS(X) \& Microsoft Windows}
+
+% \usepackage{chronology}
+% \usepackage{rotating}
+
+
+
+\begin{figure}[h!]
+    \centering
+\begin{turn}{0}
+\begin{chronology}[5]{1970}{2008}{0.89\textheight}[\textwidth]
+\event{1970}{\faTerminal UNIX}
+\event{1976}{\faApple Apple I}
+\event{1984}{\faApple Macintosh}
+\event{1985}{\faWindows Windows 1.0}
+%\event[1981]{2000}{MSDOS}
+\eventspan{1981}{2000}{\textcolor{blue}{MSDOS}}[blue]
+\event{1993}{Debian}
+\event{1995}{\faWindows Windows 95}
+\event{2001}{\faWindows Windows XP}
+\event{2004}{\faLinux Ubuntu}
+\event{2007}{\faApple iOS}
+\event{2008}{\faAndroid Android}
+\event{\decimaldate{10}{8}{1991}}{Linux 0.0.1}
+\end{chronology}
+\end{turn}
+    \caption{OS Time Line}
+    \label{fig:placeholder}
+\end{figure}
+
+
 \end{document}
+\textbf{}
